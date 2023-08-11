@@ -12,6 +12,7 @@
   "scripts": {
     "build": "rimraf -rf ./dist && tsc -p ./",
     "test": "tsx ./tests/chat",
+    "auth": "tsx ./tests/auth",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
