@@ -4,10 +4,10 @@ dotenv.config();
 
 
 async function fetchData(url: string) {
-   const httpProxy = 'http://user-god-region-us-st-oregon-sessid-usxjabl4xewvre7k2b-sesstime-1:god258369@pr.lunaproxy.com:12233';// process.env.http_proxy || process.env.HTTP_PROXY;
+   const httpProxy = 'http://43.130.10.70:20321';// process.env.http_proxy || process.env.HTTP_PROXY;
     console.log("httpProxy",httpProxy )
     if (httpProxy) {
-    console.log("httpProxy",httpProxy )
+    //console.log("httpProxy",httpProxy )
     setGlobalDispatcher(new ProxyAgent(httpProxy));
     }
 
