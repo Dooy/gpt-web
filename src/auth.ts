@@ -144,7 +144,7 @@ export default class Auth {
   private async partFive(code_verifier: string, state: string): Promise<string> {
     const url = 'https://auth0.openai.com/u/login/password?state=' + state
     console.log('partFive ',state )
-    console.log('username ',this.email )
+    
     console.log('password ',this.password )
     const headers = {
       'User-Agent': ua,
@@ -159,6 +159,7 @@ export default class Auth {
       'password': this.password,
       'action': 'default',
     };
+    console.log('data ', data  )
 
     const resp = await fetch(url, { headers, method: 'POST', body: JSON.stringify(data), redirect: 'manual' });
     if (resp.status == 302) {
