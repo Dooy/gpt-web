@@ -143,6 +143,7 @@ export default class Auth {
 
   private async partFive(code_verifier: string, state: string): Promise<string> {
     const url = 'https://auth0.openai.com/u/login/password?state=' + state
+    console.log('partFive ',state )
     const headers = {
       'User-Agent': ua,
       'Referer': url,
